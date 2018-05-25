@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "admin" => "admin#index"
+  put "admin/:id" => "admin#update"
+  patch "admin/:id" => "admin#update"
   root "grades#index"
   resources :grades, defaults:{format: :json}
   resources :users, defaults: {format: :json}
